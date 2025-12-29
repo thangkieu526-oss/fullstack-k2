@@ -1,0 +1,37 @@
+.quote-container {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 50px;
+}
+.quote-text {
+  font-style: italic;
+  text-align: left;
+  margin: 0;
+  padding: 0 60px;
+  font-size: 18px;
+}
+.quote-text::before,
+.quote-text::after {
+  content: "";
+  position: absolute;
+  background-color: #d1d1d1;
+  font-size: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.quote-text::before {
+  content: "“";
+  top: 0;
+  left: 0;
+}
+.quote-text::after {
+  content: "”";
+  bottom: 0;
+  right: 0;
+}
