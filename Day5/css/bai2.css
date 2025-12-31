@@ -9,7 +9,7 @@ body {
 .faq-item {
   margin-bottom: 8px;
 }
-input[type="radio"] {
+input[type="checkbox"] {
   display: none;
 }
 .faq-title {
@@ -26,7 +26,7 @@ input[type="radio"] {
   padding: 0 15px;
   overflow: hidden;
 }
-input[type="radio"]:checked ~ .faq-content {
+input[type="checkbox"]:checked ~ .faq-content {
   max-height: 500px;
   padding: 15px;
 }
@@ -39,7 +39,7 @@ input[type="radio"]:checked ~ .faq-content {
   top: 50%;
   transform: translateY(-50%);
 }
-input[type="radio"]:checked + .faq-title::before {
+input[type="checkbox"]:checked + .faq-title::before {
   content: "−";
 }
 .faq-title:hover {
