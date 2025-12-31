@@ -14,8 +14,9 @@ body {
   position: absolute;
   background: rgba(255, 255, 255, 0.64);
   border-radius: 6px;
-  width: 500px;
-  height: 250px;
+  width: 33%;
+  height: 36%;
+  font-size: 14px;
   text-align: center;
   top: 40%;
   left: 57%;
