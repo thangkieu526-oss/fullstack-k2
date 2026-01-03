@@ -1,0 +1,125 @@
+body {
+  background: #ebf5fe;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  max-width: 1020px;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3 ease;
+  box-shadow: 4px 10px 30px rgba(0, 0, 0, 0.05);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+.card h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  transform: translateY(8px);
+}
+.card p {
+  margin: 0;
+  color: #666;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.icon i {
+  font-size: 20px;
+  line-height: 1;
+}
+.icon-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  filter: blur(5px);
+  opacity: 0.4;
+  z-index: 1;
+}
+.card-red .icon,
+.card-red .icon-wrapper::after {
+  background: linear-gradient(90deg, #e15574 0%, #e3775a 100%);
+}
+.card-red:hover {
+  border: 2px solid #e15574;
+}
+.card-green .icon,
+.card-green .icon-wrapper::after {
+  background: linear-gradient(90deg, #4fa5a4 0%, #78d4a0 100%);
+}
+.card-green:hover {
+  border: 2px solid #4fa5a4;
+}
+.card-yellow .icon,
+.card-yellow .icon-wrapper::after {
+  background: linear-gradient(90deg, #e28933 0%, #f3bd49 100%);
+}
+.card-yellow:hover {
+  border: 2px solid #e28933;
+}
+.card-blue .icon,
+.card-blue .icon-wrapper::after {
+  background: linear-gradient(90deg, #316bce 0%, #6b8ef2 100%);
+}
+.card-blue:hover {
+  border: 2px solid #316bce;
+}
+.card-purple .icon,
+.card-purple .icon-wrapper::after {
+  background: linear-gradient(90deg, #7526cd 0%, #ba5cea 100%);
+}
+.card-purple:hover {
+  border: 2px solid #7526cd;
+}
+.card-yellowgreen .icon,
+.card-yellowgreen .icon-wrapper::after {
+  background: linear-gradient(90deg, #6b8d2e 0%, #8fc052 100%);
+}
+.card-yellowgreen:hover {
+  border: 2px solid #6b8d2e;
+}
+.learn-more {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+}

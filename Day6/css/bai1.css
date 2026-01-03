@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+.title {
+  font-family: "Lobster";
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.description {
+  color: #ddd;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.highlight {
+  color: red;
+}
+.input-group {
+  display: flex;
+  position: relative;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 18px;
+}
+select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+}
+.icon {
+  width: 50px;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-right: 1px solid #ddd;
+}
+.star-icon,
+.select-icon {
+  font-size: 10px;
+  color: #ddd;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.select-icon {
+  font-size: 12px;
+  right: 17px;
+}
+
+.input-group:hover {
+  border-color: #bbb;
+}
+
+.input-group:hover .icon {
+  border-right-color: #bbb;
+}
+
+.input-group:focus-within {
+  border-color: #333;
+}
+
+.input-group:focus-within .icon {
+  background-color: #333;
+  border-right-color: #333;
+}
+
+.input-group:focus-within .star-icon,
+.input-group:focus-within .select-icon {
+  color: #777;
+}
+.input-group input,
+.input-group select,
+.input-group textarea {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-family: "Lato";
+}
+
+textarea {
+  min-height: 150px;
+  display: block;
+}
+.textarea-group .icon {
+  align-items: flex-start;
+  padding-top: 15px;
+}
+.textarea-group .star-icon {
+  transform: none;
+  top: 15px;
+}
+.input-group::before {
+  content: attr(data-title);
+  position: absolute;
+  top: -45px;
+  left: 35px;
+  background: #333;
+  color: #fff;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-family: "Lato";
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+.input-group::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50px;
+  border: 13px solid;
+  border-color: #333 transparent transparent transparent;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+.input-group:focus-within::before,
+.input-group:focus-within::after {
+  opacity: 1;
+  visibility: visible;
+}
+.footer::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.footer {
+  width: 100%;
+  margin-top: 20px;
+}
+.copy-check {
+  float: left;
+  display: flex;
+  height: 45px;
+  color: #888;
+}
+.copy-check input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.copy-check label {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.btn-send {
+  float: right;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-send:hover {
+  background-color: #c0392b;
+}

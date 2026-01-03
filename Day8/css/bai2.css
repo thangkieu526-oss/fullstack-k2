@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Asap", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+.banner-container {
+  background: url(https://static.vinwonders.com/production/landmark-81-banner.jpg)
+    center/cover;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.brand-group {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
+}
+.logo-box {
+  background: #fff;
+  padding: 30px;
+
+  transform: translateY(15%);
+}
+.logo-box img {
+  width: 150px;
+}
+.text-content {
+  color: #fff;
+  margin-left: 20px;
+  padding-bottom: 15px;
+}
+.text-content h1 {
+  margin-bottom: 20px;
+}
+.text-content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.text-content p strong {
+  font-size: 20px;
+  margin-right: 20px;
+}
+.nav {
+  position: absolute;
+  top: 100%; /* Đẩy sát xuống dưới đáy của banner */
+  width: 100%;
+  background: white;
+  height: 50px;
+  border-bottom: 2px solid #eee;
+}
+
+.nav-container {
+  max-width: 1200px; /* Khớp với container của logo/stats */
+  margin: 0 auto;
+  height: 100%;
+}
+
+.nav ul {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end; /* Đẩy menu sang phải theo mẫu */
+  list-style: none;
+  height: 100%;
+}
+
+.nav li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+.nav li.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background: #d32f2f;
+}
+.nav li.active a {
+  color: #d32f2f;
+}
+
+.discovery-section {
+  padding: 60px 80px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  display: flex; /* Kích hoạt flexbox */
+  align-items: center; /* Căn đường kẻ nằm giữa dòng chữ */
+  width: 100%;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  gap: 15px; /* Khoảng cách giữa chữ và đường kẻ */
+}
+.section-title::after {
+  content: "";
+  flex: 1; /* Quan trọng: Để đường kẻ chiếm hết chiều rộng còn lại */
+  height: 1px; /* Độ dày của đường kẻ */
+  background-color: #ddd; /* Màu của đường kẻ */
+}
+
+/* Tab điều hướng */
+.location-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.tab-item {
+  background: #eee;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  min-width: 200px;
+  text-align: center;
+}
+
+.tab-item strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #333;
+}
+.tab-item span {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.tab-item.active {
+  background: #b8864b;
+}
+.tab-item.active strong,
+.tab-item.active span {
+  color: white;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.location-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.location-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.location-card:hover img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+}
+.card-overlay h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.card-overlay p {
+  font-size: 0.9rem;
+  font-style: italic;
+}

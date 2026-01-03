@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bai1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="contact-container">
+      <h1 class="title">Hey there</h1>
+      <p class="description">
+        <span class="highlight">We'd like to hear from you.</span> Send us your
+        message or just say hy with our contact form or directly via phone, we
+        love to chart.
+      </p>
+      <form action="">
+        <div class="input-group" data-title="Enter your name">
+          <div class="icon"><i class="fa-solid fa-user"></i></div>
+          <input type="text" placeholder="Your name" required />
+          <i class="fa-solid fa-star star-icon"></i>
+        </div>
+        <div class="input-group" data-title="Enter your email">
+          <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+          <input type="email" placeholder="your@domain.com" required />
+          <i class="fa-solid fa-star star-icon"></i>
+        </div>
+        <div class="input-group" data-title="Enter your phone">
+          <div class="icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <input type="number" placeholder="+44 00 123" />
+        </div>
+        <div class="input-group" data-title="Choose your selection">
+          <div class="icon"><i class="fa-solid fa-book"></i></div>
+          <select>
+            <option value="">Subject</option>
+            <option value="1">Subject 1</option>
+            <option value="2">Subject 2</option>
+          </select>
+          <i class="fa-solid fa-sort select-icon"></i>
+        </div>
+        <div class="input-group textarea-group" data-title="Enter your message">
+          <div class="icon"><i class="fa-solid fa-message"></i></div>
+          <textarea placeholder="Message" required></textarea>
+          <i class="fa-solid fa-star star-icon"></i>
+        </div>
+        <div class="footer">
+          <div class="copy-check">
+            <label for=""
+              ><input type="checkbox" checked />Send me a copy of this
+              message</label
+            >
+          </div>
+          <button type="submit" class="btn-send">SEND</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
