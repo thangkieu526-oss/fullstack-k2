@@ -51,7 +51,7 @@ body {
 }
 .nav {
   position: absolute;
-  top: 100%; /* Đẩy sát xuống dưới đáy của banner */
+  top: 100%;
   width: 100%;
   background: white;
   height: 50px;
@@ -59,7 +59,7 @@ body {
 }
 
 .nav-container {
-  max-width: 1200px; /* Khớp với container của logo/stats */
+  max-width: 1200px;
   margin: 0 auto;
   height: 100%;
 }
@@ -67,7 +67,7 @@ body {
 .nav ul {
   width: 95%;
   display: flex;
-  justify-content: flex-end; /* Đẩy menu sang phải theo mẫu */
+  justify-content: flex-end;
   list-style: none;
   height: 100%;
 }
