@@ -106,23 +106,22 @@ body {
 }
 
 .section-title {
-  display: flex; /* Kích hoạt flexbox */
-  align-items: center; /* Căn đường kẻ nằm giữa dòng chữ */
+  display: flex;
+  align-items: center;
   width: 100%;
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 30px;
   text-transform: uppercase;
-  gap: 15px; /* Khoảng cách giữa chữ và đường kẻ */
+  gap: 15px;
 }
 .section-title::after {
   content: "";
-  flex: 1; /* Quan trọng: Để đường kẻ chiếm hết chiều rộng còn lại */
-  height: 1px; /* Độ dày của đường kẻ */
-  background-color: #ddd; /* Màu của đường kẻ */
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
 }
 
-/* Tab điều hướng */
 .location-tabs {
   display: flex;
   gap: 10px;
