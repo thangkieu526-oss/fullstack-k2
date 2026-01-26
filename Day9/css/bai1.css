@@ -1,0 +1,179 @@
+:root {
+  --law-brown: #a37a63;
+  --btn-gray: #f1f1f1;
+  --timeline-dot: #4eb09b;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 80px;
+  padding: 20px;
+}
+
+.timeline {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+  height: 140px;
+}
+
+.axis {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--timeline-dot);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+  box-shadow: 0 0 0 3px #e0f2ef;
+}
+
+.line {
+  width: 2px;
+  height: 150px;
+  background-color: #eee;
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+}
+
+.content-wrapper,
+.date-wrapper {
+  flex: 1;
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+.content {
+  text-align: right;
+  max-width: 300px;
+}
+
+.content h2 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.date-wrapper {
+  position: relative;
+}
+
+.date-box {
+  color: #999;
+  font-size: 14px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+.timeline-item:hover .content-wrapper {
+  transform: translateX(calc(100% + 100px));
+}
+
+.timeline-item:hover .content {
+  text-align: left;
+}
+
+.timeline-item:hover .date-box {
+  transform: translateX(calc(-180px));
+}
+
+.timeline-item:hover .date-box {
+  text-align: right;
+}
+
+.btn-law {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: var(--btn-gray);
+  border: none;
+  border-radius: 50px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.timeline-item:hover .btn-law {
+  background-color: var(--law-brown);
+  color: #fff;
+  text-align: center;
+}
+
+.image-section {
+  flex: 1;
+  position: relative;
+}
+.main-img {
+  width: 65%;
+  position: absolute;
+  top: 10px;
+  left: 120px;
+}
+.card {
+  position: relative;
+  width: 220px;
+  height: 320px;
+  overflow: hidden;
+  transform: translate(-20px, 100px);
+}
+.image-layer {
+  position: absolute;
+  inset: 0;
+  background: url("https://picsum.photos/id/905/200/250.jpg") center / cover
+    no-repeat;
+}
+.overlay {
+  position: absolute;
+  inset: 12px;
+  background: #4e6cfb;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 32px 16px;
+}
+
+.number {
+  font-size: 52px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #fff;
+}
