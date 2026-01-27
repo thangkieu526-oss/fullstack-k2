@@ -20,8 +20,9 @@ body {
   font-size: 2.5rem;
 }
 .title span {
-  background: linear-gradient(-45deg, #335deb, #803bea);
+  background: linear-gradient(-45deg, #803bea, #335deb);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .sub-title {
@@ -52,7 +53,6 @@ body {
   gap: 15px;
 }
 .card h2 {
-  margin: 0;
   color: #333;
   font-size: 1.2rem;
 }
@@ -109,8 +109,11 @@ body {
 }
 
 hr {
-  color: #ddd;
-  margin: 10px 0;
+  height: 2px;
+  background: #eee;
+  margin: 15px 0;
+  border: none;
+  border-radius: 5px;
 }
 .ex-list {
   margin-bottom: auto;
@@ -147,13 +150,13 @@ hr {
 .more {
   gap: 15px;
   display: flex;
-  margin-top: 20px;
-  padding: 10px;
+  width: fit-content;
+  padding: 10px 20px;
   justify-content: center;
   background: #333;
   cursor: pointer;
   border-radius: 4px;
-  margin-top: 20px;
+  margin: 20px auto;
   transition: all 0.3s ease;
   border: 1px solid transparent;
 }
@@ -164,6 +167,7 @@ hr {
 }
 .more a {
   text-decoration: none;
+  font-weight: bold;
   color: white;
 }
 
