@@ -32,25 +32,43 @@ p {
   margin-bottom: 20px;
 }
 .form-group {
+  position: relative;
   flex: 1;
 }
-input,
-select,
-textarea {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+select {
   width: 100%;
-  padding: 15px 20px;
+  padding: 17.5px 20px;
+  color: #333;
+  background: #f9faff;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.custom-select::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #94a3b8;
+  pointer-events: none;
+  transition: all 0.2s ease;
 }
 
 .btn-submit {
-  padding: 20px 40px;
+  padding: 20px 30px;
   background-color: #4c77d9;
   margin-top: 20px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
   border: none;
@@ -58,4 +76,60 @@ textarea {
 }
 .btn-submit:hover {
   background-color: #3b5bdb;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background-color: #f9faff;
+  transition: all 0.2s ease-in-out;
+  color: #333;
+  display: block;
+}
+
+.form-group input {
+  padding: 26px 16px 10px 16px;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  padding: 30px 16px 16px 16px;
+}
+
+.form-group label {
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  color: #94a3b8;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-group input + label {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-group:hover input,
+.form-group:hover textarea,
+.form-group:hover select {
+  border-color: #9b87f5;
+  background-color: #ffffff;
+}
+
+.form-group:hover label,
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: 8px;
+  transform: translateY(0);
+  font-size: 12px;
+  color: #9b87f5;
+  font-weight: 600;
 }

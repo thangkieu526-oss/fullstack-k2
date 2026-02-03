@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,19 +19,22 @@
             <input
               type="text"
               name="fname"
-              placeholder="First Name *"
               required
+              placeholder=" "
               autocomplete="given-name"
             />
+            <label>First Name *</label>
           </div>
+
           <div class="form-group">
             <input
               type="text"
               name="lname"
-              placeholder="Last Name *"
               required
+              placeholder=" "
               autocomplete="family-name"
             />
+            <label>Last Name *</label>
           </div>
         </div>
 
@@ -40,13 +43,14 @@
             <input
               type="email"
               name="email"
-              placeholder="Email *"
+              placeholder=" "
               required
               autocomplete="email"
             />
+            <label> Email *</label>
           </div>
-          <div class="form-group">
-            <select name="sales" id="">
+          <div class="form-group custom-select">
+            <select name="sales">
               <option value="sales">Sales</option>
               <option value="option1">Option1</option>
               <option value="option2">Option2</option>
@@ -55,12 +59,8 @@
         </div>
 
         <div class="form-group">
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="Message *"
-            required
-          ></textarea>
+          <textarea name="message" rows="5" placeholder=" " required></textarea>
+          <label class="mess">Message *</label>
         </div>
 
         <button type="submit" class="btn-submit">Send message</button>

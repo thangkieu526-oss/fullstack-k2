@@ -169,7 +169,10 @@ body {
 .number {
   font-size: 52px;
   font-weight: 800;
-  color: #fff;
+  color: transparent;
+  background-image: url("https://picsum.photos/id/905/200/250.jpg");
+  background-size: cover;
+  background-clip: text;
 }
 
 .text {

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        max-width: 1200px;
+        margin: 30px auto;
+      }
+      input {
+        padding: 10px;
+        border-radius: 8px;
+      }
+      p {
+        font-size: 20px;
+      }
+      mark {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tìm kiếm chuỗi</h1>
+
+    <input type="text" placeholder="Nhập từ cần tìm" onkeyup="searchText()" />
+
+    <p id="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam
+      minima atque perspiciatis in molestias expedita similique dolorum
+      blanditiis eveniet nisi vero officia, nostrum eaque ex quia consequuntur
+      sint! Iste id, voluptates, harum consectetur, at in deserunt explicabo
+      dignissimos aperiam optio nam alias nesciunt sint rem. Veniam assumenda
+      maxime a, dolores voluptas reprehenderit animi amet, quod incidunt
+      inventore nemo cupiditate maiores labore aliquam nisi nam obcaecati.
+      Cumque accusamus aspernatur nostrum commodi laudantium libero similique
+      rem. Nemo, pariatur veniam amet magnam ad deleniti reprehenderit vel aut
+      iure assumenda ipsa eaque ducimus saepe corrupti quo possimus voluptates
+      magni blanditiis repellendus optio eligendi?
+    </p>
+
+    <script>
+      var content = document.getElementById("content");
+      var originalText = content.innerHTML;
+
+      function searchText() {
+        var keyword = event.target.value;
+
+        if (keyword == "") {
+          content.innerHTML = originalText;
+          return;
+        }
+
+        content.innerHTML = originalText.replaceAll(
+          keyword,
+          "<mark>" + keyword + "</mark>",
+        );
+      }
+    </script>
+  </body>
+</html>

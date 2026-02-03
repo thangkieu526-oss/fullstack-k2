@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        font-family: Arial;
+        margin: 0;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #111;
+        color: #aaa;
+      }
+
+      .line {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .char {
+        color: #555;
+      }
+
+      .active {
+        color: #ff3b3b;
+      }
+
+      .play-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 30px;
+        background: #ff3b3b;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 25px;
+        user-select: none;
+      }
+
+      .play-btn:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="karaoke"></div>
+    <div class="play-btn" onclick="togglePlay()" id="playBtn">▶ PLAY</div>
+    <script src="../js/ex01.js"></script>
+  </body>
+</html>
