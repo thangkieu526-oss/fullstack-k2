@@ -112,7 +112,7 @@ for (var i = 0; i < numbers.length; i++) {
 }
 
 if (!inserted) {
-  numbers[newArr.length] = element;
+  newArr[newArr.length] = element;
 }
 
 document.getElementById("bai4").innerHTML =

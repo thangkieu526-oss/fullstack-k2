@@ -14,7 +14,7 @@ function login(email, password) {
     return "Vui lòng nhập email và password";
   }
   for (let i = 0; i < users.length; i++) {
-    if ((users[i].email = email && users[i].password === password)) {
+    if (users[i].email === email && users[i].password === password) {
       return users[i];
     }
   }

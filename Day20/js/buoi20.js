@@ -23,17 +23,17 @@ document.getElementById("bai1").innerHTML =
 var arr2 = [0, 1, [2, 3], [4, 5, [6, 7]], [8, [9, 10, [11, 12]]]];
 var result = [];
 
-function flatArr(array) {
+function flattenArr(array) {
   for (var i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
-      flatArr(array[i]);
+      flattenArr(array[i]);
     } else {
       result.push(array[i]);
     }
   }
 }
 
-flatArr(arr2);
+flattenArr(arr2);
 
 document.getElementById("bai2").innerHTML =
   "Arr = " +

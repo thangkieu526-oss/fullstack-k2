@@ -48,11 +48,12 @@ body {
 .card-header {
   display: flex;
   align-items: center;
-  gap: 40px;
+  text-align: center;
+  gap: 35px;
 }
 .card h2 {
   color: #333;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .icon-wrapper {
   position: relative;
